@@ -84,6 +84,9 @@ if st.session_state.page == "Home":
         (df["Capacity_tier"].isin(Capacity_tier))
     ]
 
+    st.subheader("Filtered Data Table")
+    st.dataframe(df_selection.reset_index(drop=True))
+
     # Title
     st.title("CCH Data Visualization Dashboard")
     st.markdown("##")
@@ -209,3 +212,4 @@ Developed by Daniel Kioko                                                     ©
 """
 
 st.markdown(footer, unsafe_allow_html=True)
+
